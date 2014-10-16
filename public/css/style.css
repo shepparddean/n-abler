@@ -1,0 +1,8 @@
+.gridStyle {
+	height: 250px;
+}
+
+.ngViewport {
+	overflow: overlay !important;
+}
+
