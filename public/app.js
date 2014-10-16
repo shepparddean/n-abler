@@ -1,35 +1,35 @@
 // main.js
-var app = angular.module('nablerApp', ['appControllers', 'appServices']);
+var app = angular.module('nablerApp', ['appControllers']); //, 'appServices']);
 
 var appControllers = angular.module('appControllers', []);
-var appServices    = angular.module('appServices', []);
-var appDirectives  = angular.module('appDirectives', []);
+// var appServices    = angular.module('appServices', []);
+// var appDirectives  = angular.module('appDirectives', []);
 
 
 var options = {};
 options.api = {};
 options.api.base_url = "http://localhost:8081";
 
-// app.config(function($locationProvider, $routeProvider) {
+app.config(function($locationProvider, $routeProvider) {
 
-// $routeProvider.
-//         when('/', {
-//             templateUrl: 'index.html',
-//             access: { requiredLogin: false }
-//         }).
-//         when('/admin/login', {
-//             templateUrl: 'index.html',
-//             access: { requiredLogin: false }
-//         }).
-//         when('/main', {
-//             templateUrl: 'main.html',
-//             access: { requiredLogin: true }
-//         }).
-//         otherwise({
-//             redirectTo: '/'
-//         });
+$routeProvider.
+        when('/', {
+            templateUrl: 'index.html',
+            access: { requiredLogin: false }
+        }).
+        when('/admin/login', {
+            templateUrl: 'index.html',
+            access: { requiredLogin: false }
+        }).
+        when('/main', {
+            templateUrl: 'main.html',
+            access: { requiredLogin: true }
+        }).
+        otherwise({
+            redirectTo: '/'
+        });
 
-// });
+});
 
 // app.config(function ($httpProvider) {
 //     $httpProvider.interceptors.push('TokenInterceptor');
