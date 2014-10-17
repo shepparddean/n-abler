@@ -1,5 +1,4 @@
-appControllers.controller('AdminUserCtrl', function($scope, $location, $window, $state) {
-	// UserService, AuthenticationService) {
+appControllers.controller('AdminUserCtrl', function($scope, $location, $window, UserService, AuthenticationService) {
 
 
 	//Attributes
