@@ -1,8 +1,8 @@
 // main.js
-var app = angular.module('nablerApp', ['appControllers']); //, 'appServices']);
+var app = angular.module('nablerApp', ['ngRoute', 'appControllers', 'appServices']);
 
 var appControllers = angular.module('appControllers', []);
-// var appServices    = angular.module('appServices', []);
+var appServices    = angular.module('appServices', []);
 // var appDirectives  = angular.module('appDirectives', []);
 
 
