@@ -21,8 +21,8 @@ $routeProvider.
             templateUrl: 'index.html',
             access: { requiredLogin: false }
         }).
-        when('/main', {
-            templateUrl: 'main.html',
+        when('/home', {
+            templateUrl: 'testing.html',
             access: { requiredLogin: true }
         }).
         otherwise({

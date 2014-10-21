@@ -25,7 +25,7 @@ appControllers.controller('AdminUserCtrl', function($scope, $location, $window, 
 				AuthenticationService.isLogged = true;
 				$scope.login.error = false;
 				$window.sessionStorage.token = data.token;
-				// $location.path("/admin");
+				$location.path("/home");
 
 			}).error(function(data, status) {
 				$scope.login.errormessage = 'Invalid account information. Please try again.';
