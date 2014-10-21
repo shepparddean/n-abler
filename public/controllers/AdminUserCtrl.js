@@ -5,8 +5,16 @@ appControllers.controller('AdminUserCtrl', function($scope, $location, $window, 
 	$scope.error = false;
 	$scope.errormessage = '';
 
+
+	$scope.submitForm = function(isValid) {
+		if(isValid) {
+			logIn($scope.login.email, $scope.login.password);
+		}
+	}
+
+
 	//Admin User Controller (login, logout)
-	$scope.logIn = function logIn(email, password) {
+	logIn = function logIn(email, password) {
 
 
 		if (email !== undefined && password !== undefined) {
@@ -20,11 +28,12 @@ appControllers.controller('AdminUserCtrl', function($scope, $location, $window, 
 				// $location.path("/admin");
 
 			}).error(function(data, status) {
-				$scope.login.errormessage = 'Got it wrong bud';
+				$scope.login.errormessage = 'Invalid account information. Please try again.';
 				$scope.login.error = true;
 			});
 		}
 	}
+	
 
 	$scope.logout = function logout() {
 		if (AuthenticationService.isLogged) {

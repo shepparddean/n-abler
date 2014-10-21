@@ -12,18 +12,25 @@ module.exports = function(app, passport) {
 
 
 	app.get('/api/loginFailure', function(req, res) {
-		res.status(401).json({message: 'Login Failed', success: true});
+		res.status(401).json({
+			message: 'Login Failed',
+			success: true
+		});
 	});
 
 	app.get('/api/loginSuccess', function(req, res) {
-		res.status(200).json({message:'Welcome!', success: true});
+		res.status(200).json({
+			message: 'Welcome!',
+			success: true
+		});
 	});
 
 
 	// process the login form
-	app.post('/api/login', passport.authenticate('local-login', { 
+	app.post('/api/login', passport.authenticate('local-login', {
 		successRedirect: '/api/loginSuccess',
-		failureRedirect: '/api/loginFailure'}));
+		failureRedirect: '/api/loginFailure'
+	}));
 
 };
 
