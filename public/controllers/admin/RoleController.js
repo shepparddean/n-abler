@@ -1,6 +1,7 @@
 /**
- * This controller manages the sidebar menu;
- * 
+ * This is the controller for managing the Role Administration Screen;
+ *
+ *
  * @param  {[type]} $scope                [description]
  * @param  {[type]} $location             [description]
  * @param  {[type]} $window               [description]
@@ -8,12 +9,14 @@
  * @param  {[type]} AuthenticationService [description]
  * @return {[type]}                       [description]
  */
-appControllers.controller('SidebarController', function($scope, $location, $window, UserService, AuthenticationService) {
+appControllers.controller('RoleController',
 
+	function($scope, RoleService) {
 
-	$scope.isAuthenticated = function() {
-		return AuthenticationService.isLogged;
+		RoleService.getRoles().success(function(data) {
+			$scope.roles = data;
+
+		});
 	}
-	
 
-});
+);

@@ -6,3 +6,9 @@
 	overflow: overlay !important;
 }
 
+.ng-table th.text-right {
+    text-align: right;
+}
+.ng-table th.text-left {
+    text-align: left;
+}

@@ -9,7 +9,7 @@
             <!--
             The login form
             -->
-            <form id="loginform" name="loginform" class="form-horizontal" role="form"  ng-submit="submitForm(loginform.$valid)" ng-controller="AdminUserCtrl" novalidate>
+            <form id="loginform" name="loginform" class="form-horizontal" role="form"  ng-submit="submitForm(loginform.$valid)" ng-controller="AuthenticationController" novalidate>
 
                 <div class="alert alert-danger col-sm-8 col-sm-offset-2" role="alert" ng-show="login.error">
                     <h5>{{ login.errormessage }}</h5>

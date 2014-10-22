@@ -1,0 +1,18 @@
+<div ng-controller="RoleController">
+	<div class="jumbotron col-md-10 col-md-offset-2 ">
+		<h1>Role Management</h1>
+		<p>
+		You can manage the roles here!
+		</p>
+	</div>
+
+	<div class="col-md-5 col-md-offset-2">
+
+
+		<table tr-ng-grid="rolesTable" items="roles" class="table" enable-filtering=false fields="['name', 'description']">
+		</table>
+
+
+
+	</div>
+</div>

@@ -1,4 +1,14 @@
-appControllers.controller('AdminUserCtrl', function($scope, $location, $window, UserService, AuthenticationService) {
+/**
+ * [description]
+ * @param  {[type]} $scope                [description]
+ * @param  {[type]} $location             [description]
+ * @param  {[type]} $window               [description]
+ * @param  {[type]} UserService           [description]
+ * @param  {[type]} AuthenticationService [description]
+ * @return {[type]}                       [description]
+ * @author Dean Sheppard
+ */
+appControllers.controller('AuthenticationController', function($scope, $location, $window, UserService, AuthenticationService) {
 
 
 	//Attributes
@@ -28,10 +38,9 @@ appControllers.controller('AdminUserCtrl', function($scope, $location, $window, 
 				$location.path("/home");
 
 			}).error(function(data, status) {
-				AuthenticationService.isLogged = true;
+				AuthenticationService.isLogged = false;
 				$scope.login.errormessage = 'Invalid account information. Please try again.';
 				$scope.login.error = true;
-				$location.path("/home");
 			});
 		}
 	}

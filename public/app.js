@@ -1,5 +1,11 @@
 // main.js
-var app = angular.module('nablerApp', ['ngRoute', 'appControllers', 'appServices']);
+var app = angular.module('nablerApp', 
+    [
+    'ngRoute', 
+    'trNgGrid',
+    'appControllers',
+    'appServices'
+    ]);
 
 var appControllers = angular.module('appControllers', []);
 var appServices    = angular.module('appServices', []);
@@ -17,12 +23,29 @@ $routeProvider.
             templateUrl: 'views/login.html',
             access: { requiredLogin: false }
         }).
+        when('/login', {
+            templateUrl: 'views/login.html',
+            access: {requiredLogin: false }
+        }).
         when('/home', {
             templateUrl: 'views/main.html',
             access: { requiredLogin: true}
         }).
+        when('/admin/roles', {
+            templateUrl: 'views/admin/roles.html',
+            access: { requiredLogin: true}
+        }).
+        when('/admin/companies', {
+            templateUrl: 'views/admin/companies.html',
+            access: { requiredLogin: true}
+        }).
+        when('/admin/users', {
+            templateUrl: 'views/admin/users.html',
+            access: { requiredLogin: true}
+        }).
         otherwise({
-            redirectTo: '/'
+            redirectTo: '/home',
+            access: { requiredLogin: true}
         });
 
 });
@@ -32,14 +55,19 @@ $routeProvider.
 // });
 
 
-// // Now, we have to configure our routes to let AngularJS knows when a
-// // specific route needs an authentication, and when it’s the case, we 
-// // have to check the user is authenticated by checking the isLogged value of
-// // the AuthenticationService:
-// app.run(function($rootScope, $location, AuthenticationService) {
-//     $rootScope.$on("$routeChangeStart", function(event, nextRoute, currentRoute) {
-//         if (nextRoute.access.requiredLogin && !AuthenticationService.isLogged) {
-//             $location.path("/admin/login");
-//         }
-//     });
-// });
+// Now, we have to configure our routes to let AngularJS knows when a
+// specific route needs an authentication, and when it’s the case, we 
+// have to check the user is authenticated by checking the isLogged value of
+// the AuthenticationService:
+app.run(function($rootScope, $location, AuthenticationService) {
+    $rootScope.$on("$routeChangeStart", function(event, nextRoute, currentRoute) {
+        // console.log('Intercepting the route change');
+        // console.log('Going to ', nextRoute);
+        // console.log('Access Required ', nextRoute.access ? nextRoute.access.requiredLogin : 'unknown');
+        // console.log('Authenticated ', AuthenticationService.isLogged );
+        
+        if (nextRoute.access.requiredLogin && !AuthenticationService.isLogged) {
+            $location.path("/login");
+        }
+    });
+});
