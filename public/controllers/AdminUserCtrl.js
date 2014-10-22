@@ -28,8 +28,10 @@ appControllers.controller('AdminUserCtrl', function($scope, $location, $window, 
 				$location.path("/home");
 
 			}).error(function(data, status) {
+				AuthenticationService.isLogged = true;
 				$scope.login.errormessage = 'Invalid account information. Please try again.';
 				$scope.login.error = true;
+				$location.path("/home");
 			});
 		}
 	}

@@ -8,22 +8,18 @@ var appServices    = angular.module('appServices', []);
 
 var options = {};
 options.api = {};
-options.api.base_url = "http://localhost:8081";
+// options.api.base_url = "http://localhost:8081";
 
 app.config(function($locationProvider, $routeProvider) {
 
 $routeProvider.
         when('/', {
-            templateUrl: 'index.html',
-            access: { requiredLogin: false }
-        }).
-        when('/admin/login', {
-            templateUrl: 'index.html',
+            templateUrl: 'views/login.html',
             access: { requiredLogin: false }
         }).
         when('/home', {
-            templateUrl: 'testing.html',
-            access: { requiredLogin: true }
+            templateUrl: 'views/main.html',
+            access: { requiredLogin: true}
         }).
         otherwise({
             redirectTo: '/'

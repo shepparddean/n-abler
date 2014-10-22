@@ -11,6 +11,7 @@
         <title>N-Abler Internal Dashboard </title>
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/css/nabler.css" />
 
         <!-- Custom Fonts -->
         <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -23,75 +24,55 @@
 
         <script type="text/javascript" src="app.js"></script>
         <script type="text/javascript" src="/controllers/AdminUserCtrl.js"></script>
+        <script type="text/javascript" src="/controllers/SidebarController.js"></script>
         <script type="text/javascript" src="/service/AppServices.js"></script>
 
     </head>
 
     <body>
-        <div class="container">
-            <div class="row-fluid" style="padding-top: 25px;">
-                <div class="mainbox col-md-6 col-md-offset-3 " >
-                    <div class="panel panel-info " >
-                        <div class="panel-heading text-center" >
-                            <div class="panel-title"><i class="fa fa-user fa-5x"></i></div>
 
-                        </div>
-                        <div style="padding-top:30px" class="panel-body" >
-                            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                            <!--
-                            The login form
-                            -->
-                            <form id="loginform" name="loginform" class="form-horizontal" role="form"  ng-submit="submitForm(loginform.$valid)" ng-controller="AdminUserCtrl" novalidate>
-
-                                <div class="alert alert-danger col-sm-8 col-sm-offset-2" role="alert" ng-show="login.error">
-                                    <h5>{{ login.errormessage }}</h5>
-                                </div>
-
-
-                                <div style="margin-bottom: 25px" class="input-group col-sm-8 col-sm-offset-2" ng-class="{'has-error': loginform.email.$invalid }">
-                                    <span class="input-group-addon">
-                                    <i class="glyphicon glyphicon-user"></i>
-                                    </span>
-                                    <input id="login-email" type="email" class="form-control" name="email" placeholder="username or email" ng-model="login.email" required/>
-                                </div>
-
-                                <div style="margin-bottom: 25px" class="input-group col-sm-8 col-sm-offset-2" ng-class="{'has-error': loginform.password.$invalid }">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input id="login-password" type="password" class="form-control" name="password" placeholder="password" ng-model="login.password" required>
-                                </div>
-
-                                <div style="margin-bottom: 25px" class="input-group col-sm-8 col-xs-8 col-sm-offset-2 col-xs-offset-2" >
-                                    <div class="col-sm-8">
-                                        <p ng-show="loginform.email.$invalid && !loginform.email.$pristine" class="help-block">Username is an email address.</p>
-                                    </div>
-
-                                    <div class="col-sm-4" style="text-align: right; padding-right: 0;">
-                                        <button type="submit"  class="btn btn-primary"  ng-disabled="loginform.$invalid">Login</button>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                        <div class="panel-footer" style="height: 50px;">
-                            <div class="col-md-6 col-xs-6" >
-                                <a id="btn-forget" href="#" class="btn btn-link" style="width:100%"><i class="fa fa-lock fa-fw "> </i> Forgot Password?</a>
-                            </div>
-                            <div class="col-md-6 col-xs-6"  >
-                                <a id="btn-forget" href="#" class="btn btn-link" style="width: 100%"><i class="fa fa-user fa-fw  text-center"></i> Sign Up</a>
-                            </div>
-
-
-                            <!-- <div class="col-md-1 col-md-offset-2 " style="border:1px solid black;"> -->
-                            <!-- -->
-                            <!-- </div> -->
-                            <!-- <div class="col-md-4">&nbsp;</div> -->
-                            <!-- <div class="col-md-4" style="border:1px solid black;"> -->
-                            <!--  -->
-                            <!-- </div> -->
-                        </div>
-                    </div>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">NorthBrook Exchange</a>
                 </div>
             </div>
-        </div>
-    </body>
-</html>
+        </nav>
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar"ng-controller="SidebarController" ng-show="isAuthenticated()">
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="#">Overview</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Export</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">Nav item</a></li>
+                        <li><a href="">Nav item again</a></li>
+                        <li><a href="">One more nav</a></li>
+                        <li><a href="">Another nav item</a></li>
+                        <li><a href="">More navigation</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">Nav item again</a></li>
+                        <li><a href="">One more nav</a></li>
+                        <li><a href="">Another nav item</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div ng-view style="padding-left: 375px;"></div>
+
+        </body>
+    </html>

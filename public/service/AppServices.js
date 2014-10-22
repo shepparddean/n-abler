@@ -13,10 +13,15 @@ appServices.factory('UserService', function($http) {
     return {
 
         logIn: function(email, password) {
-            return $http.post(options.api.base_url + '/api/login', {email: email, password: password});
+            return $http.post('/api/login', {email: email, password: password});
         },
+
         logOut: function() {
             console.log('You wanna log?');
+        },
+
+        isAuthenticated: function() {
+            return true;
         }
     }
 });
