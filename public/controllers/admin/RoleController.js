@@ -11,12 +11,51 @@
  */
 appControllers.controller('RoleController',
 
-	function($scope, RoleService) {
+	function($scope, RoleService, $location, $window) {
 
-		RoleService.getRoles().success(function(data) {
-			$scope.roles = data;
+		//$scope.roles = {};
 
-		});
+		RoleService.getRoles().success(
+			function(data) {
+				$scope.roles = data;
+			}
+		);
+
+
+		$scope.submitForm = function(isValid) {
+			if (isValid) {
+				save();
+			}
+		}
+
+
+
+		save = function() {
+			
+			var role         = {};
+			role.name        = $scope.name;
+			role.description = $scope.description;
+			role.code        = $scope.code;
+
+			RoleService.saveRole(role)
+				.success(function(data) {
+					$scope.name        = '';
+					$scope.description = '';
+					$scope.code        = '';
+
+					RoleService.getRoles()
+						.success(
+							function(data) {
+								// debugger;
+								$scope.roles = data;
+							}
+					);
+				});
+		}
+
+
+
+
 	}
 
 );

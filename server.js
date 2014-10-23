@@ -43,6 +43,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // routes ======================================================================
 require('./routes/authentication.js')(app, passport); // load our routes and pass in our app and fully configured passport
 require('./routes/roles.js')(app);
+require('./routes/users.js')(app);
 
 
 

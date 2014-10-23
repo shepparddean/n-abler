@@ -3,10 +3,6 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
-//user depends on Roles
-var RoleModel = require('./role');
-
-
 // define the schema for our user model
 var userSchema = mongoose.Schema({
 
@@ -18,9 +14,11 @@ var userSchema = mongoose.Schema({
             last: String
         }
     },
+
     //Reference to the company
-    companyId: { type: mongoose.Schema.ObjectId, required: true },
-    roles: [RoleModel]
+   companyId: { type: mongoose.Schema.Types.ObjectId, required: false },
+
+    roles: [mongoose.Schema.Types.ObjectId]
 
 });
 

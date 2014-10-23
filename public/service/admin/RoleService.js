@@ -16,6 +16,25 @@ appServices.factory('RoleService', function($http) {
          */
         getRoles: function() {
             return $http.get('/api/roles');
+        },
+
+
+
+        /**
+         * Creates the new role
+         * 
+         * @param  {[type]} role [description]
+         * @return {[type]}      [description]
+         */
+        saveRole: function(role) {
+            console.log(role);
+
+            return $http.post('/api/role', {
+                name: role.name,
+                code: role.code,
+                description: role.description
+            });
+
         }
     }
 });
