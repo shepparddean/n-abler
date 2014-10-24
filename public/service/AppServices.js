@@ -2,7 +2,7 @@
 
 appServices.factory('AuthenticationService', function() {
     var auth = {
-        isLogged: false
+        isLogged: true
     }
  
     return auth;

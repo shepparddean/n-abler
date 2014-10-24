@@ -2,6 +2,7 @@
 var app = angular.module('nablerApp', 
     [
     'ngRoute', 
+    'ui.bootstrap',
     'trNgGrid',
     'appControllers',
     'appServices'
@@ -29,7 +30,7 @@ $routeProvider.
         }).
         when('/home', {
             templateUrl: 'views/main.html',
-            access: { requiredLogin: true}
+            access: { requiredLogin: false}
         }).
         when('/admin/roles', {
             templateUrl: 'views/admin/roles.html',
@@ -42,6 +43,14 @@ $routeProvider.
         when('/admin/users', {
             templateUrl: 'views/admin/users.html',
             access: { requiredLogin: true}
+        }).
+        when('/application/ondeck', {
+            templateUrl: 'views/application/ondeck.html',
+            access: { requiredLogin: false}
+        }).
+        when('/test/test', {
+            templateUrl: 'views/test/tester.html',
+            access: { requiredLogin: false}
         }).
         otherwise({
             redirectTo: '/home',

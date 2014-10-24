@@ -1,0 +1,381 @@
+<div>
+
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p class="panel-title"><i class='fa fa-file-text-o fa-fw'></i> Small Business Loan Application</p>
+			</div>
+			<div class="panel-body" style="height:600px;">
+
+
+				<form class="form-horizontal" name="roleForm" role="form">
+					<tabset>
+					<tab>
+					<tab-heading>
+					<i class='fa fa-fax fa-fw'></i> Business Details
+					</tab-heading>
+
+					<div style="padding-left: 10px; padding-top: 15px;">
+
+						<div class="form-group">
+							<label for="businessName" class="col-sm-2 control-label" style="text-align: left">Business Name</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="businessName" placeholder="Name of the business" required>
+							</div>
+
+							<label for="code" class="col-sm-2 control-label" style="text-align: left;">Nature of Business</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="businessNature" placeholder="Nature of the business">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="legalEntity" class="col-sm-2 control-label" style="text-align: left">Legal Entity</label>
+							<div class="col-sm-3">
+								<select class="form-control">
+									<option>Sole-Proprietorship</option>
+									<option>Limited Liability Corporation</option>
+									<option>Corporation</option>
+									<option>GP</option>
+									<option>Limited Partnership</option>
+									<option>Limited Liability Partnership</option>
+									<option>Unknown</option>
+								</select>
+							</div>
+
+							<label for="businesAs" class="col-sm-2 control-label" style="text-align: left">Doing Business As</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="businesAs"  placeholder="Other name of the business">
+							</div>
+						</div>
+
+						<div class="form-group" style="padding-top: 5px; ">
+							<label for="address1" class="col-sm-2 control-label" style="text-align: left">Address Line 1</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="address1"  placeholder="Line 1 of Address">
+							</div>
+							<label for="address2" class="col-sm-2 control-label" style="text-align: left">Address Line 2</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="address2"  placeholder="Line 2 of Address">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="addressCity" class="col-sm-2 control-label" style="text-align: left">City / Province</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control" id="addressCity"  placeholder="City">
+							</div>
+							<div class="col-sm-1">
+								<select class="form-control" id="addressProvince">
+									<option value="AB">Alberta</option>
+									<option>British Columbia</option>
+									<option>P.E.I</option>
+									<option>Newfoundland</option>
+									<option>New Brunswick</option>
+									<option>Manitoba</option>
+									<option>Saskatchewan</option>
+									<option>Nova Scotia</option>
+									<option>Ontario</option>
+									<option>Quebec</option>
+									<option>Nunavut</option>
+									<option>N.W.T.</option>
+									<option>Yukon</option>
+								</select>
+							</div>
+							<label for="addressPostalCode" class="col-sm-2 control-label" style="text-align: left">Postal Code</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control" id="addressPostalCode"  placeholder="Postal Code">
+							</div>
+						</div>
+						<div class="form-group" style="padding-top: 5px;">
+							<label for="landlordName" class="col-sm-2 control-label" style="text-align: left">Landlord Name</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="landlordName"  placeholder="Name of the Landlord">
+							</div>
+						<!-- 				</div>
+						<div class="form-group"> -->
+							<label for="landlordPhone" class="col-sm-2 control-label" style="text-align: left">Landlord Phone</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="landlordPhone"  placeholder="Phone number of the landloard">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="businessTaxId" class="col-sm-2 control-label" style="text-align: left">Business Tax Number</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="businessTaxId"  placeholder="Business Tax Number">
+							</div>
+							<label for="businessInceptionDate" class="col-sm-2 control-label" style="text-align: left">Inception Date</label>
+							<div class="col-sm-3">
+								<input type="date" class="form-control" id="businessInceptionDate"  placeholder="Business Inception Date">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="businessSicCode" class="col-sm-2 control-label" style="text-align: left">SIC Code</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="businessSicCode"  placeholder="SIC Code">
+							</div>
+							<label for="businessNaicsCode" class="col-sm-2 control-label" style="text-align: left">NAICS Code</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="businessNaicsCode"  placeholder="Business NAICS Code">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="businessCanContact" class="col-sm-2 control-label" style="text-align: left">Phone / Contact?</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control" id="phone"  placeholder="Phone Number">
+							</div>
+							<div class="col-sm-1">
+								<input type="checkbox" class="form-control" id="businessCanContact"  placeholder="Business Contactible">
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<label for="businessLoanPurpose" class="col-sm-2 control-label" style="text-align: left">Purpose of Loan</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="businessLoanPurpose"  placeholder="Purpose of Loan">
+							</div>
+						</div>
+					</div>
+
+					<!--
+
+					-->
+					</tab>
+					<tab>
+					<tab-heading>
+					<i class='fa fa-user fa-fw'></i> Owner Details
+					</tab-heading>
+					<!-- ############################################################### -->
+					<!-- Owner Information -->
+					<!-- ############################################################### -->
+
+					<div style="padding-left: 10px; padding-top: 15px;">
+						<div class="form-group">
+							<label for="onwerName"  class="col-sm-2 control-label" style="text-align: left">Name</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="ownerName"  placeholder="Name of Owner">
+							</div>
+							<label for="ownerEmail"  class="col-sm-2 control-label" style="text-align: left">Email</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">@</div>
+									<input type="text" class="form-control" id="ownerEmail"  placeholder="Owners Email">
+								</div>
+							</div>
+
+						</div>
+						<div class="form-group" style="padding-top: 5px; ">
+							<label for="ownerAddress1" class="col-sm-2 control-label" style="text-align: left">Address Line 1</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="address1"  placeholder="Line 1 of Address">
+							</div>
+							<label for="ownerAddress2" class="col-sm-2 control-label" style="text-align: left">Address Line 2</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="address2"  placeholder="Line 2 of Address">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ownerAddressCity" class="col-sm-2 control-label" style="text-align: left">City / Province</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control" id="addressCity"  placeholder="City">
+							</div>
+
+							<div class="col-sm-1">
+								<select class="form-control" id="ownerAddressProvince">
+									<option value="AB">Alberta</option>
+									<option>British Columbia</option>
+									<option>P.E.I</option>
+									<option>Newfoundland</option>
+									<option>New Brunswick</option>
+									<option>Manitoba</option>
+									<option>Saskatchewan</option>
+									<option>Nova Scotia</option>
+									<option>Ontario</option>
+									<option>Quebec</option>
+									<option>Nunavut</option>
+									<option>N.W.T.</option>
+									<option>Yukon</option>
+								</select>
+							</div>
+							<label for="ownerAddressPostalCode" class="col-sm-2 control-label" style="text-align: left">Postal Code</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control" id="ownerAddressPostalCode"  placeholder="Postal Code">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="ownerHomePhone"  class="col-sm-2 control-label" style="text-align: left">Phone Number</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="ownerHomePhone"  placeholder="Phone Number">
+							</div>
+							<label for="ownerDateofBirth"  class="col-sm-2 control-label" style="text-align: left">Date of Birth</label>
+							<div class="col-sm-3">
+								<input type="date" class="form-control" id="ownerDateOfBirth"  placeholder="Date of Birth">
+							</div>
+						</div>
+
+
+						<div class="form-group">
+
+							<label for="ownerCellPhone"  class="col-sm-2 control-label" style="text-align: left">Cell Phone</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="ownerCellPhone"  placeholder="Cell Number">
+							</div>
+							<label for="ownerPercentage"  class="col-sm-2 control-label" style="text-align: left">Ownership</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">%</div>
+									<input type="text" class="form-control" id="ownerPercentage"  placeholder="0">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ownerSin"  class="col-sm-2 control-label" style="text-align: left">SIN #.</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">#</div>
+									<input type="text" class="form-control" id="ownerSin"  placeholder="Social Insurance Number">
+								</div>
+							</div>
+							<label for="ownerAnnualIncome"  class="col-sm-2 control-label" style="text-align: left">Annual Income</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" id="ownerAnnualIncome"  placeholder="0.00">
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-sm-10" style="padding-top:25px;">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr class="active">
+									<th data-field="select"  style="text-align: center;">Select</th>
+									<th data-field="id">Owner</th>
+									<th data-field="name">Email</th>
+									<th data-field="price">Phone</th>
+									<th data-field="price"  style="text-align: center;">Ownership %</th>
+								</tr>
+							</thead>
+							<tr>
+								<td  style="text-align: center;"><input type="checkbox"></td>
+								<td>John Smith</td>
+								<td>jsmith@newbuz.com</td>
+								<td>905-510-9822</td>
+								<td  style="text-align: center;">75%</td>
+							</tr>
+							<tr>
+								<td  style="text-align: center;"><input type="checkbox"></td>
+								<td>Bob Scott</td>
+								<td>bscott@newbuz.com</td>
+								<td>905-510-9823</td>
+								<td  style="text-align: center;">25%</td>
+							</tr>
+						</table>
+					</div>
+
+
+					</tab>
+					<tab>
+					<tab-heading>
+					<i class='fa fa-usd fa-fw'></i> Reporting Details
+					</tab-heading>
+
+					<!-- ############################################################### -->
+					<!-- Self Reported -->
+					<!-- ############################################################### -->
+					<div style="padding-left: 10px; padding-top: 15px;">
+
+						<div class="form-group">
+							<label for="desiredLoanTerm"  class="col-sm-2 control-label" style="text-align: left">Loan Term</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="loanTerm"  placeholder="">
+							</div>
+							<label for="transactionCount" class="col-sm-2 control-label" style="text-align: left">Transaction Count</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="transactionCount"  placeholder="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="revenue"  class="col-sm-2 control-label" style="text-align: left">Revenue $</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" id="revenue"  placeholder="">
+								</div>
+							</div>
+							<label for="ownerCellPhone"  class="col-sm-2 control-label" style="text-align: left">Cell Phone</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="ownerCellPhone"  placeholder="">
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="averageBalance"  class="col-sm-2 control-label" style="text-align: left">Average Balance</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" id="averageBalance"  placeholder="">
+								</div>
+							</div>
+
+							<label for="averageCreditCardVolume"  class="col-sm-2 control-label" style="text-align: left">Credit Card Balance</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" id="averageCreditCardVolume"  placeholder="">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="mcaBalance"  class="col-sm-2 control-label" style="text-align: left">Merchant Cash Advance Balance</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" id="mcaBalance"  placeholder="">
+								</div>
+							</div>
+							<label for="desiredLoanAmount" class="col-sm-2 control-label" style="text-align: left">Loan Amount</label>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" id="desiredLoanAmount"  placeholder="">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="creditScore"  class="col-sm-2 control-label" style="text-align: left">Credit Score</label>
+							<div class="col-sm-3">
+								<input type="text" class="form-control" id="creditScore"  placeholder="">
+							</div>
+
+							<label for="separateBusinessBankAccount"  class="col-sm-2 control-label" style="text-align: left">Separate Business Account</label>
+							<div class="col-sm-3">
+								<input type="checkbox" class="form-control" id="separateBusinessBankAccount"  placeholder="">
+							</div>
+						</div>
+					</div>
+					</tab>
+					</tabset>
+					<!-- ############################################################### -->
+					<!-- End of Input  -->
+					<!-- ############################################################### -->
+					<!-- Form Buttons -->
+
+				</form>
+
+			</div>
+			<div class="panel-footer" style="height: 55px;">
+				<div class="col-sm-10 col-sm-offset-8">
+					<button class="btn btn-default">Cancel</button>
+					<button type="submit" class="btn btn-primary" ng-disabled="roleForm.$invalid">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
