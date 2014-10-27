@@ -28,26 +28,36 @@ appControllers.controller('RoleController',
 			}
 		}
 
+		$scope.cancel = function() {
+			clearForm();
+		}
+
+
+		clearForm = function() {
+			$scope.name = '';
+			$scope.description = '';
+			$scope.code = '';
+		}
+
 
 
 		save = function() {
-			
-			var role         = {};
-			role.name        = $scope.name;
+
+			var role = {};
+			role.name = $scope.name;
 			role.description = $scope.description;
-			role.code        = $scope.code;
+			role.code = $scope.code;
 
 			RoleService.saveRole(role)
 				.success(function(data) {
-					$scope.name        = '';
-					$scope.description = '';
-					$scope.code        = '';
+					clearForm();
 
 					RoleService.getRoles()
 						.success(
 							function(data) {
 								// debugger;
 								$scope.roles = data;
+
 							}
 					);
 				});
