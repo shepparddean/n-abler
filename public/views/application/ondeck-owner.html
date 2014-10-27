@@ -1,0 +1,141 @@
+<!-- ############################################################### -->
+<!-- Owner Information -->
+<!-- ############################################################### -->
+<div style="padding-left: 10px; padding-top: 15px;">
+	<div class="alert alert-info" role="alert">
+		<p>Please note that while On Deck does not require personal guarantees for its loans, a review of the Business Owners personal credit is a part of the loan adjudication process. By Submitting this application the applicant(s) agree to allow "<i>xxxxxxxxxxx</i>"
+		</p>
+	</div>
+
+	<div class="form-group">
+		<label for="onwerName"  class="col-sm-2 control-label input-sm" style="text-align: left">Name</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control input-sm" id="ownerName"  placeholder="Name of Owner">
+		</div>
+		<label for="ownerEmail"  class="col-sm-2 control-label input-sm" style="text-align: left">Email</label>
+		<div class="col-sm-4">
+			<div class="input-group">
+				<div class="input-group-addon input-sm">@</div>
+				<input type="text" class="form-control input-sm" id="ownerEmail"  placeholder="Owners Email">
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="ownerPercentage"  class="col-sm-2 control-label input-sm" style="text-align: left">Ownership</label>
+		<div class="col-sm-4">
+			<div class="input-group">
+				<div class="input-group-addon input-sm">%</div>
+				<input type="text" class="form-control input-sm" id="ownerPercentage"  placeholder="0">
+			</div>
+		</div>
+	</div>
+	<div class="form-group" style="padding-top: 5px; ">
+		<label for="ownerAddress1" class="col-sm-2 control-label input-sm" style="text-align: left">Address Line 1</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control input-sm" id="address1"  placeholder="Line 1 of Address">
+		</div>
+		<label for="ownerAddress2" class="col-sm-2 control-label input-sm" style="text-align: left">Address Line 2</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control input-sm" id="address2"  placeholder="Line 2 of Address">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="ownerAddressCity" class="col-sm-2 control-label input-sm" style="text-align: left">City / Province</label>
+		<div class="col-sm-2">
+			<input type="text" class="form-control input-sm" id="addressCity"  placeholder="City">
+		</div>
+		<div class="col-sm-2">
+			<select class="form-control input-sm" id="ownerAddressProvince">
+				<option value="AB">Alberta</option>
+				<option>British Columbia</option>
+				<option>P.E.I</option>
+				<option>Newfoundland</option>
+				<option>New Brunswick</option>
+				<option>Manitoba</option>
+				<option>Saskatchewan</option>
+				<option>Nova Scotia</option>
+				<option>Ontario</option>
+				<option>Quebec</option>
+				<option>Nunavut</option>
+				<option>N.W.T.</option>
+				<option>Yukon</option>
+			</select>
+		</div>
+		<label for="ownerAddressPostalCode" class="col-sm-2 control-label input-sm" style="text-align: left">Postal Code</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control input-sm" id="ownerAddressPostalCode"  placeholder="Postal Code">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="ownerHomePhone"  class="col-sm-2 control-label input-sm" style="text-align: left">Phone Number</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control input-sm" id="ownerHomePhone"  placeholder="Phone Number">
+		</div>
+		<label for="ownerCellPhone"  class="col-sm-2 control-label input-sm" style="text-align: left">Cell Phone</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control input-sm" id="ownerCellPhone"  placeholder="Cell Number">
+		</div>
+
+	</div>
+	<div class="form-group">
+		<label for="ownerAnnualIncome"  class="col-sm-2 control-label input-sm" style="text-align: left">Annual Income</label>
+		<div class="col-sm-4">
+			<div class="input-group">
+				<div class="input-group-addon input-sm">$</div>
+				<input type="text" class="form-control input-sm" id="ownerAnnualIncome"  placeholder="0.00">
+			</div>
+		</div>
+		<label for="ownerDateofBirth"  class="col-sm-2 control-label input-sm" style="text-align: left">Date of Birth</label>
+		<div class="col-sm-4">
+			<input type="date" class="form-control input-sm" id="ownerDateOfBirth"  placeholder="Date of Birth">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="ownerSin"  class="col-sm-2 control-label input-sm" style="text-align: left">SIN #.</label>
+		<div class="col-sm-4">
+			<div class="input-group">
+				<div class="input-group-addon input-sm">#</div>
+				<input type="text" class="form-control input-sm" id="ownerSin"  placeholder="Social Insurance Number">
+			</div>
+		</div>
+		<label for="ownerCreditScore"  class="col-sm-2 control-label input-sm" style="text-align: left">Credit Score</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control input-sm" id="ownerCreditScore"  placeholder="Owners Credit Score">
+		</div>
+
+	</div>
+</div>
+
+<div class="col-sm-12" style="padding-top: 15px;">
+	<table class="table table-bordered table-hover table-condensed">
+		<thead>
+			<tr class="active">
+				<th data-field="select"  style="text-align: center;">Select</th>
+				<th data-field="id">Owner</th>
+				<th data-field="name">Email</th>
+				<th data-field="price">Phone</th>
+				<th data-field="price"  style="text-align: center;">Ownership %</th>
+			</tr>
+		</thead>
+		<tr>
+			<td  style="text-align: center;"><input type="checkbox"></td>
+			<td>John Smith</td>
+			<td>jsmith@newbuz.com</td>
+			<td>905-510-9822</td>
+			<td  style="text-align: center;">75%</td>
+		</tr>
+		<tr>
+			<td  style="text-align: center;"><input type="checkbox"></td>
+			<td>Bob Scott</td>
+			<td>bscott@newbuz.com</td>
+			<td>905-510-9823</td>
+			<td  style="text-align: center;">25%</td>
+		</tr>
+	</table>
+	<div class="col-sm-12 col-sm-offset-4"  >
+		<button type="button" class="btn btn-default btn-sm" popover="Click here to add a new owner to the application" popover-trigger="mouseenter">Add Owner</button>
+		<button type="button" class="btn btn-default btn-sm" popover="Click here to edit the selected owner" popover-trigger="mouseenter">Edit Owner</button>
+		<button type="button" class="btn btn-default btn-sm" popover="Click here to remove the owner fro mthe application" popover-trigger="mouseenter">Remove Owner</button>
+	</div>
+</div>

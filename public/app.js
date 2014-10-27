@@ -45,7 +45,7 @@ $routeProvider.
             access: { requiredLogin: true}
         }).
         when('/application/ondeck', {
-            templateUrl: 'views/application/ondeck.html',
+            templateUrl: 'views/application/ondeck-main.html',
             access: { requiredLogin: false}
         }).
         when('/test/test', {
@@ -70,10 +70,10 @@ $routeProvider.
 // the AuthenticationService:
 app.run(function($rootScope, $location, AuthenticationService) {
     $rootScope.$on("$routeChangeStart", function(event, nextRoute, currentRoute) {
-        // console.log('Intercepting the route change');
-        // console.log('Going to ', nextRoute);
-        // console.log('Access Required ', nextRoute.access ? nextRoute.access.requiredLogin : 'unknown');
-        // console.log('Authenticated ', AuthenticationService.isLogged );
+        console.log('Intercepting the route change');
+        console.log('Going to ', nextRoute);
+        console.log('Access Required ', nextRoute.access ? nextRoute.access.requiredLogin : 'unknown');
+        console.log('Authenticated ', AuthenticationService.isLogged );
         
         if (nextRoute.access.requiredLogin && !AuthenticationService.isLogged) {
             $location.path("/login");
