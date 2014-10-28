@@ -67,32 +67,62 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">NorthBrook Exchange</a>
+                <a class="navbar-brand" href="#">NorthBrook Exchange</a>
+            </div>
+        </div>
+    </nav>
+    <!-- This is the sidebar menu, it will be updated to be driven by a controller
+    but for now it is a manual list
+    -->
+    <div class="container" style="border-top-right-radius: 6px;">
+        <div class="panel">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar" ng-controller="SidebarController" ng-show="isAuthenticated()">
+                    <ul class="nav nav-sidebar list-group">
+
+                        <li class="list-group-item">
+                            <a href="#/home">
+                                <i class="fa fa-home fa-fw"></i>  Home
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#/application/ondeck">
+                                <i class="fa fa-users fa-fw"></i> On-Deck
+                            </a>
+                        </li>
+
+
+                        <li class="list-group-item">
+                            <a href="#/admin/roles">
+                                <i class="fa fa-users fa-fw"></i> Role Admin
+                            </a>
+                        </li>
+
+                        
+                        <li class="list-group-item">
+                            <a href="#/admin/companies">
+                                <i class="fa fa-university fa-fw"></i> Company Admin
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#/admin/users">
+                                <i class="fa fa-user fa-fw"></i> User Admin
+                            </a>
+                        </li>
+                       
+                        <li class="list-group-item">
+                            <a href="#/test/test">
+                                <i class="fa fa-user fa-fw"></i> Test Page
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
-        <!-- This is the sidebar menu, it will be updated to be driven by a controller
-        but for now it is a manual list
-        -->
-        <div class="container" style="border-top-right-radius: 6px;">
-            <div class="panel">
-                <div class="row">
-                    <div class="col-sm-3 col-md-2 sidebar" ng-controller="SidebarController" ng-show="isAuthenticated()">
-                        <ul class="nav nav-sidebar list-group">
-                            <li class="active list-group-item"><a href="#/home"><i class="fa fa-home fa-fw"></i>  Home</a></li>
-                            <li class="list-group-item"><a href="#/admin/roles"><i class="fa fa-users fa-fw"></i> Role Admin</a></li>
-                            <li class="list-group-item"><a href="#/application/ondeck"><i class="fa fa-users fa-fw"></i> On-Deck</a></li>
-                            <li class="list-group-item"><a href="#/admin/companies"><i class="fa fa-university fa-fw"></i> Company Admin</a></li>
-                            <li class="list-group-item"><a href="#/admin/users"><i class="fa fa-user fa-fw"></i> User Admin</a></li>
-
-                            <li class="list-group-item"><a href="#/test/test"><i class="fa fa-user fa-fw"></i> Test Page</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div ng-view></div>
         </div>
 
-    </body>
+        <div ng-view></div>
+    </div>
+
+</body>
 </html>
