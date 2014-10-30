@@ -1,14 +1,19 @@
 .gridStyle {
-	height: 250px;
+    height: 250px;
 }
-
 .ngViewport {
-	overflow: overlay !important;
+    overflow: overlay !important;
 }
-
 .ng-table th.text-right {
     text-align: right;
 }
 .ng-table th.text-left {
     text-align: left;
 }
+
+form .form-divide {
+	margin-left: 10px;
+	margin-right: 10px;
+    border-top: 1px dashed #ddd;
+}
+

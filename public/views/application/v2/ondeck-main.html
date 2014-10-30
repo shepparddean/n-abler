@@ -1,0 +1,62 @@
+<div>
+	<div class="col-sm-10 col-sm-offset-2">
+		<!-- <div class="panel panel-default">
+			<div class="panel-heading">
+				<p class="panel-title"><i class='fa fa-file-text-o fa-fw'></i> Small Business Loan Application</p>
+			</div>
+			<div class="panel-body" style="height:775px;">
+ -->
+
+				<form class="form-horizontal" name="roleForm" role="form">
+					<tabset>
+
+						<tab popover="Enter the details pertaining to the buisness." popover-trigger="mouseenter">
+							<tab-heading>
+								<i class='fa fa-fax fa-fw'></i> Business Details (v2)
+							</tab-heading>
+							<div ng-include src="'views/application/v2/ondeck-business.html'"></div>
+						</tab>	
+
+						<tab popover="Enter the details pertaining to the associated Credit Union." popover-trigger="mouseenter">
+							<tab-heading>
+								<i class='fa fa-bank fa-fw'></i> Banking Details (v2)
+							</tab-heading>
+							<div ng-include src="'views/application/v2/ondeck-creditunion.html'"></div>
+						</tab>
+						<tab popover="Enter the details pertaining to the owners of the business." popover-trigger="mouseenter">
+							<tab-heading>
+								<i class='fa fa-user fa-fw'></i> Owner Details (v2)
+							</tab-heading>
+							<div ng-include src="'views/application/v2/ondeck-owner.html'"></div>
+						</tab>
+						<tab popover="Enter the credit details of the business." popover-trigger="mouseenter">
+							<tab-heading>
+								<i class='fa fa-usd fa-fw'></i> Business Activity Details (v2)
+							</tab-heading>
+							<div ng-include src="'views/application/v2/ondeck-credit.html'"></div>
+						</tab>
+						<tab popover="Final review and submission to OnDeck." popover-trigger="mouseenter">
+							<tab-heading>
+								<i class='fa fa-download fa-fw'></i> Submit
+							</tab-heading>
+							<div ng-include src="'views/application/v2/ondeck-submit.html'"></div>
+						</tab>
+
+					
+
+					</tabset>
+					<!-- ############################################################### -->
+					<!-- End of Input  -->
+					<!-- ############################################################### -->
+					<!-- Form Buttons -->
+				</form>
+			</div>
+		<!-- 	<div class="panel-footer" style="height: 55px;">
+				<div class="col-sm-12 col-sm-offset-10">
+					<button class="btn btn-default">Cancel</button>
+					<button type="button" class="btn btn-primary" ng-click="nextTab()">Next</button>
+				</div>
+			</div>
+		</div> -->
+	</div>
+</div>

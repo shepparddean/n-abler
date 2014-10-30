@@ -45,7 +45,11 @@ $routeProvider.
             access: { requiredLogin: true}
         }).
         when('/application/ondeck', {
-            templateUrl: 'views/application/ondeck-main.html',
+            templateUrl: 'views/application/v1/ondeck-main.html',
+            access: { requiredLogin: false}
+        }).
+        when('/application/ondeckv2', {
+            templateUrl: 'views/application/v2/ondeck-main.html',
             access: { requiredLogin: false}
         }).
         when('/test/test', {
