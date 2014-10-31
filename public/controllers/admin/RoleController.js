@@ -13,7 +13,6 @@ appControllers.controller('RoleController',
 
 	function($scope, RoleService, $location, $window) {
 
-		//$scope.roles = {};
 
 		RoleService.getRoles().success(
 			function(data) {
@@ -62,10 +61,6 @@ appControllers.controller('RoleController',
 					);
 				});
 		}
-
-
-
-
 	}
 
 );

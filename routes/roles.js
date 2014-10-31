@@ -46,7 +46,7 @@ module.exports = function(app) {
 				res.send(err);
 			}
 
-			console.log('Hello');
+	
 
 			res.json(roles);
 		});

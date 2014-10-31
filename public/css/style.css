@@ -17,3 +17,11 @@ form .form-divide {
     border-top: 1px dashed #ddd;
 }
 
+.navbar-header {
+	background-image: url('/images/NBLogo.JPG') !important;
+	background-size: 45px 45px;
+	background-repeat: no-repeat;
+	background-position-y: 3px;
+	padding-left: 55px;
+}
+

@@ -51,7 +51,6 @@
         <script type="text/javascript" src="/service/AppServices.js"></script>
         <script type="text/javascript" src="/service/admin/RoleService.js"></script>
 
-
         <!-- Controllers -->
         <script type="text/javascript" src="/controllers/AuthenticationController.js"></script>
         <script type="text/javascript" src="/controllers/SidebarController.js"></script>
@@ -79,7 +78,7 @@
     <div class="container" style="border-top-right-radius: 6px;">
         <div class="panel">
             <div class="row">
-                <div class="col-sm-3 col-md-2 sidebar" ng-controller="SidebarController" ng-show="isAuthenticated()">
+                <div class="col-sm-3 col-md-2 sidebar" ng-controller="SidebarController" ng-show="isAuthenticated()" style=""> 
                     <ul class="nav nav-sidebar list-group">
 
                         <li class="list-group-item">
@@ -93,7 +92,7 @@
                                 <i class="fa fa-users fa-fw"></i> On-Deck
                             </a>
                         </li>
-                        
+
                         <li class="list-group-item">
                             <a href="#/application/ondeckv2">
                                 <i class="fa fa-users fa-fw"></i> On-Deck v2
@@ -107,7 +106,7 @@
                             </a>
                         </li>
 
-                        
+
                         <li class="list-group-item">
                             <a href="#/admin/companies">
                                 <i class="fa fa-university fa-fw"></i> Company Admin
@@ -118,7 +117,7 @@
                                 <i class="fa fa-user fa-fw"></i> User Admin
                             </a>
                         </li>
-                       
+
                         <li class="list-group-item">
                             <a href="#/test/test">
                                 <i class="fa fa-user fa-fw"></i> Test Page
